@@ -19,7 +19,6 @@ namespace RPG_Project.DataConnection
             optionsBuilder.UseSqlServer(connString);
         }
         public DbSet<HeroModel> Heroes { get; set; }
-        //Works :)  
     }
 }
 
