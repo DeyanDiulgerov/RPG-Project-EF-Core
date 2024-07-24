@@ -1,0 +1,16 @@
+﻿1) Code
+1.1) All Helper/Repetitive Methods are at the bottom of Game Class 
+- organized by sections and with detailed names
+1.2) Wanted to Split the helper methods into Services (characterSelectService and inGameService)
+but could not do it in time
+
+2) GitHub
+2.1 - Wish I posted the code earlier to GitHub so you can see more of the changes while they were being made
+
+3) Game ideas (not implemented because I wanted to stick to the requirements)
+3.1 - thought of replacing enemy monster symbol '◙' with each monster's unique Id on the playing grid
+- so you have an idea exactly which monster is closest to you and you can attack it
+3.2 - thought of having a turn counter (2,3,4) for when monsters spawn (currently spawning every turn)
+- so you don't get overwhelmed so fast and can play for longer
+3.3 - thought of bonus perks spawning on the map
+- double damage, health pack, invulnerability, etc...
