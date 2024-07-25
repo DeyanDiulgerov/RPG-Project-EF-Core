@@ -451,57 +451,41 @@ namespace RPG_Project
             {
                 case "W":
                     ourHero.Row -= ourHero.Range;
-                    if (ourHero.Row < 0)
-                        ourHero.Row = 0;
                     break;
                 case "S":
                     ourHero.Row += ourHero.Range;
-                    if (ourHero.Row >= rows)
-                        ourHero.Row = rows - 1;
                     break;
                 case "D":
                     ourHero.Col += ourHero.Range;
-                    if (ourHero.Col >= cols)
-                        ourHero.Col = cols - 1;
                     break;
                 case "A":
                     ourHero.Col -= ourHero.Range;
-                    if (ourHero.Col < 0)
-                        ourHero.Col = 0;
                     break;
                 case "E":
                     ourHero.Row -= ourHero.Range;
                     ourHero.Col += ourHero.Range;
-                    if (ourHero.Row < 0)
-                        ourHero.Row = 0;
-                    if (ourHero.Col >= cols)
-                        ourHero.Col = cols - 1;
                     break;
                 case "X":
                     ourHero.Row += ourHero.Range;
                     ourHero.Col += ourHero.Range;
-                    if (ourHero.Row >= rows)
-                        ourHero.Row = rows - 1;
-                    if (ourHero.Col >= cols)
-                        ourHero.Col = cols - 1;
                     break;
                 case "Q":
                     ourHero.Row -= ourHero.Range;
                     ourHero.Col -= ourHero.Range;
-                    if (ourHero.Row < 0)
-                        ourHero.Row = 0;
-                    if (ourHero.Col < 0)
-                        ourHero.Col = 0;
                     break;
                 case "Z":
                     ourHero.Row += ourHero.Range;
                     ourHero.Col -= ourHero.Range;
-                    if (ourHero.Row >= rows)
-                        ourHero.Row = rows - 1;
-                    if (ourHero.Col < 0)
-                        ourHero.Col = 0;
                     break;
             }
+            if (ourHero.Row >= rows)
+                ourHero.Row = rows - 1;
+            else if (ourHero.Row < 0)
+                ourHero.Row = 0;
+            if (ourHero.Col >= cols)
+                ourHero.Col = cols - 1;
+            else if (ourHero.Col < 0)
+                ourHero.Col = 0;
             if (matrix[ourHero.Row][ourHero.Col] == '◙')
             {
                 Console.WriteLine("You cannot move on top of a monster");
